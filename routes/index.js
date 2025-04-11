@@ -1,6 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path'); // <-- Add this line
+const port = process.env.PORT || 8080;
+
+app.listen(port, () => {
+  `Server started on port ${port}`;
+});
 
 
 
