@@ -1,0 +1,22 @@
+/* 
+Author: Maira Bermeo
+*/
+/* GENERAL STYLING */
+body {
+    background: url('/images/start.webp') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* TITLE STYLING */
+.title h1 {
+    font-size: 80px;
+    font-family: 'Press Start 2P', cursive;
+    color: #FFC72C; 
+    text-align: center;
+    animation: float 2s infinite ease-in-out alternate;
+}

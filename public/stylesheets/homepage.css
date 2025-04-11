@@ -1,0 +1,159 @@
+/* 
+Author: Maira Bermeo 
+*/
+
+/* NAVBAR */
+nav {
+    background-color: #00c4cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 60px; 
+    height: 90px;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+
+.middle {
+    text-align: center;
+    position: fixed;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.middle h2 {
+    background: #346bc8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: inline-block;
+    font-size: 30px;
+}
+
+.left img, .right img {
+    height: 100px;
+    position: fixed;
+}
+
+.left {
+    position: fixed;
+    top: 1px;
+    left: 20px;
+}
+
+.right {
+    position: fixed;
+    top: 1px;
+    right: 120px;
+}
+
+body {
+    background: url('/images/home.webp') no-repeat center center fixed;
+    color: white;
+    background-size: cover;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    padding-top: 65px;
+}
+
+/* WELCOME SECTION */
+.welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-left: 10%;
+    padding-bottom: 10px;
+}
+
+.welcome-top h1{
+    font-size: 60px;
+    font-family: Arial, sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px #ffffff, 
+                 2px 2px 0px #ffffff, 
+                 3px 3px 0px #ffffff,
+                 4px 4px 0px #857878,
+                 5px 5px 0px #857878;
+    margin-bottom: 10px;
+}
+
+.welcome-middle img{
+    width: 150px;
+    display: block;
+    padding-top: -20px;
+}
+
+/* BUTTONS SECTION */
+.widgets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 100px;
+    margin-top: 50px;
+    position: relative;
+    padding-left: 5%;
+    padding-bottom: 10px;
+}
+
+.start, .settings {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.startlogo img, .settingslogo img {
+    width: 120px; 
+    position: absolute;
+    top: -25px; 
+    left: -35px; 
+    z-index: 2; 
+}
+
+.startbutton button, .settingsbutton button {
+    background: #FFCCE1; 
+    border: none;
+    padding: 20px 80px;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 45px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    font-style: italic;
+    position: relative;
+    z-index: 1; 
+}
+
+.startbutton button:hover, .settingsbutton button:hover {
+    background: #FF99C8; 
+    transform: scale(1.1); 
+    box-shadow: 5px 5px 15px #0000004d; 
+}
+
+/* BOTTOM CHARACTERS */
+.characters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.characters img {
+    width: 70px;
+    transition: transform 0.3s ease-in-out;
+    background-color: #0067f8;
+    border-radius: 20px;
+}
