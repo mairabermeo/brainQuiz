@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         letters.forEach((letter, index) => {
             setTimeout(() => {
-                letter.style.transform = "translateY(-10px)"; // Move letter up
+                letter.style.transform = "translateY(-10px)";
                 setTimeout(() => {
                     letter.style.transform = "translateY(0px)";
                 }, 300);
