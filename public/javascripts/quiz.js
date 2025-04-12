@@ -240,5 +240,5 @@ function finishQuiz() {
   localStorage.setItem('correctAnswers', score);
 
   // Go to results page
-  window.location.href = '/results';
+  window.location.href = 'results.html';
 }
