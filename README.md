@@ -15,11 +15,11 @@ A web-based Quiz Application developed collaboratively by our team as part of th
 
 ## 👩‍💻 Team Members & Roles
 
-**Faiza**:
+*Faiza*
 -
-**Hanya**:
+*Hanya*
 -
-**Jude**:
+*Jude*
 -
-**Maira**:
+*Maira*
 -
