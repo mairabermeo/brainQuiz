@@ -85,12 +85,12 @@ if (savedFontSize) {
     } else if (scoreNum >= 40) {
         // Medium score
         if (resultEmoji) resultEmoji.src = 'images/meh.png';
-        if (resultMessage) resultMessage.src = 'images/almost.gif';
+        if (resultMessage) resultMessage.src = 'images/almost.webp';
         document.body.classList.add('meh-score');
     } else {
         // Bad score
-        if (resultEmoji) resultEmoji.src = 'images/crying-img.png';
-        if (resultMessage) resultMessage.src = 'images/luck-img.png';
+        if (resultEmoji) resultEmoji.src = 'images/crying-img.webp';
+        if (resultMessage) resultMessage.src = 'images/better-luck-next-time.webp.';
         document.body.classList.add('bad-score');
     }
   
