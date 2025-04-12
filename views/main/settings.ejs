@@ -5,62 +5,54 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Settings</title>
-  <link rel="stylesheet" href="settings.css">
+  <link rel="stylesheet" href="/stylesheets/settings.css">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Nav Bar-->
-  <nav>
-    <img src="images/logo.webp" alt="Logo" class="nav-logo">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="quiz.html" class="active">Quiz</a></li>
-      <li><a href="results.html">Results</a></li>
-      <li><a href = "settings.html"> Settings </a></li>
-    </ul>
-    <img src="images/logo.webp" alt="Logo" class="flipped">
-  </nav>
 
-  <!-- Container -->
-  <div class="full-container">
-    <div class="title-container">
-      <img src="images/button2.webp" class="title-image" />
-      <div class="title-text">Game Settings</div>
-    </div>
-  
-    <div class="setting-container">
-      <div class="setting">
-        <span id="mode-label">Light Mode:</span>
-        <label class="switch">
-          <input type="checkbox" id="dark-mode-toggle" />
-          <span class="slider"></span>
-        </label>
-      </div>
-      
-      <div class="setting font-size-setting">
-        <span>Font size</span>
-        <div class="font-options">
-          <button class="font-btn small">A <small>a</small></button>
-          <button class="font-btn medium">A <small>A</small></button>
-          <button class="font-btn large"><strong>A</strong> <strong>a</strong></button>
-        </div>
-      </div>
-      
-      <div class="save-button">
-        <button id="save-settings-btn">Save Changes</button>
-      </div>      
-    </div>
-  </div>  
+<%- include('header') %>
 
-    <!--BOTTOM-->
+<!-- Container -->
+ <div class="full-container">
+  <div class="title-container">
+    <img src="/images/button2.webp" class="title-image" />
+    <div class="title-text">Game Settings</div>
+  </div>
+
+  <div class="setting-container">
+    <div class="setting">
+      <span id="mode-label">Light Mode:</span>
+      <label class="switch">
+        <input type="checkbox" id="dark-mode-toggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="setting font-size-setting">
+      <span>Font size</span>
+      <div class="font-options">
+        <button class="font-btn small">A <small>a</small></button>
+        <button class="font-btn medium">A <small>A</small></button>
+        <button class="font-btn large"><strong>A</strong> <strong>a</strong></button>
+      </div>
+    </div>
+    
+    <div class="save-button">
+      <button id="save-settings-btn">Save Changes</button>
+    </div>      
+  </div>
+</div>  
+
+<!-- Bottom Characters -->
 <div class="characters">
-    <img src="images/image1.webp" alt="Image 1">
-    <img src="images/image2.webp" alt="Image 2">
-    <img src="images/image3.webp" alt="Image 3">
-    <img src="images/image4.webp" alt="Image 4">
-    <img src="images/image5.webp" alt="Image 5">
-    <img src="images/image6.webp" alt="Image 6">
+  <img src="/images/image1.webp" alt="Image 1">
+  <img src="/images/image2.webp" alt="Image 2">
+  <img src="/images/image3.webp" alt="Image 3">
+  <img src="/images/image4.webp" alt="Image 4">
+  <img src="/images/image5.webp" alt="Image 5">
+  <img src="/images/image6.webp" alt="Image 6">
 </div>
-  <script src="settings.js"></script>
+
+<script src="/javascripts/settings.js"></script>
 </body>
 </html>
