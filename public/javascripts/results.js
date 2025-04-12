@@ -1,5 +1,5 @@
+// === APPLY SAVED SETTINGS ===//
 document.addEventListener('DOMContentLoaded', function() {
-    // === APPLY SAVED SETTINGS ===
 const savedDarkMode = localStorage.getItem("darkMode");
 const savedFontSize = localStorage.getItem("fontSize");
 
@@ -79,18 +79,18 @@ if (savedFontSize) {
   
     if (scoreNum >= 70) {
         // Good score
-        if (resultEmoji) resultEmoji.src = 'images/thumbs-up.webp';
-        if (resultMessage) resultMessage.src = 'images/great.webp';
+        if (resultEmoji) resultEmoji.src = '/images/thumbs-up.webp';
+        if (resultMessage) resultMessage.src = '/images/great.webp';
         document.body.classList.add('good-score');
     } else if (scoreNum >= 40) {
         // Medium score
-        if (resultEmoji) resultEmoji.src = 'images/meh.png';
-        if (resultMessage) resultMessage.src = 'images/almost.webp';
+        if (resultEmoji) resultEmoji.src = '/images/meh.webp';
+        if (resultMessage) resultMessage.src = '/images/almost.webp';
         document.body.classList.add('meh-score');
     } else {
         // Bad score
-        if (resultEmoji) resultEmoji.src = 'images/crying-img.webp';
-        if (resultMessage) resultMessage.src = 'images/better-luck-next-time.webp.';
+        if (resultEmoji) resultEmoji.src = '/images/crying-img.webp';
+        if (resultMessage) resultMessage.src = '/images/better-luck-next-time.webp';
         document.body.classList.add('bad-score');
     }
   
