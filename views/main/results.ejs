@@ -3,37 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="results.css">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/results.css">
   <title>Results</title>
 </head>
 <body>
-  <nav>
-    <img src="images/logo.webp" alt="Logo" class="nav-logo">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="quiz.html" class="active">Quiz</a></li>
-      <li><a href="results.html">Results</a></li>
-      <li><a href="settings.html">Settings</a></li>
-    </ul>
-    <img src="images/logo.webp" alt="Logo" class="flipped">
-  </nav>  
 
-  <div class="quiz-results-container">
-    <img id="result-emoji" src="" alt="Result Emoji" class="nav-logo">
-    <button class="quiz-results-button">Quiz Results</button>
-    <img id="result-message" src="" alt="Result Message" class="nav-logo">
-  </div>
+  <%- include('header') %>
 
-  <div class="container">
-    <div class="banner-container">
-      <img src="images/banner.svg" alt="Banner Shape" class="banner">
-      <div class="score-text" style="top: 25% !important; margin-top: 10px !important;">Your Score:</div>
-      <div id="score-percentage" class="score-value">0</div>
-      <img src="images/perc.webp" alt="Percentage" class="perc-image">
-    </div>
+<div class="quiz-results-container">
+  <img id="result-emoji" src="" alt="Result Emoji" class="nav-logo">
+  <button class="quiz-results-button">Quiz Results</button>
+  <img id="result-message" src="" alt="Result Message" class="nav-logo">
+</div>
+
+<div class="container">
+  <div class="banner-container">
+    <img src="/images/banner.svg" alt="Banner Shape" class="banner">
+    <div class="score-text" style="top: 25% !important; margin-top: 10px !important;">Your Score:</div>
+    <div id="score-percentage" class="score-value">0</div>
+    <img src="/images/perc.webp" alt="Percentage" class="perc-image">
   </div>
-  
-  <script src="results.js"></script>
+</div>
+
+<div class="restart-container">
+  <a href="/quiz" class="restart-button">Restart Quiz</a>
+</div>
+
+<script src="/javascripts/results.js"></script>
 </body>
 </html>
