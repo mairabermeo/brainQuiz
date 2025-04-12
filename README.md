@@ -15,7 +15,7 @@ A web-based Quiz Application developed collaboratively by our team as part of th
 
 ## 👩‍💻 Team Members & Roles
 
-- *Faiza*:
+- *Faiza*: I worked on the HTML and CSS for the questions and results pages. Made the design layout for the loading page. Worked on the JavaScript for the settings page and the questions page. Assisted in the JavaScript for the results page. 
 - *Hanya*:
 - *Jude*:
 - *Maira*:
