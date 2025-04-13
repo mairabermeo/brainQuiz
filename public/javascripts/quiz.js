@@ -14,7 +14,7 @@ let allQuestions = [];
 let selectedQuestions = [];
 let userAnswers = [];
 let currentQuestionIndex = 0;
-let totalTimeLeft = 30; // Total quiz time in seconds
+let totalTimeLeft = 30; 
 let timerInterval;
 
 // Element references
