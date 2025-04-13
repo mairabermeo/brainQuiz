@@ -13,6 +13,15 @@ A web-based Quiz Application developed collaboratively by our team as part of th
 
 ---
 
+## 🖥️ How to run the server
+If you are doing it locally:
+  1. Download the files in this GitHub repository.
+  2. Make sure you download node.js first ( https://nodejs.org/en/download)
+  3. In your terminal run it by typing "npm start" 
+If you click the website link you don't have to do anything. 
+
+---
+
 ## 👩‍💻 Team Members & Roles
 
 - *Faiza*: I worked on the HTML and CSS for the questions and results pages. Made the design layout for the loading page. Worked on the JavaScript for the settings page and the questions page. Assisted in the JavaScript for the results page. 
