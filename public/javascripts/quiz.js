@@ -1,19 +1,20 @@
-// === APPLY SAVED SETTINGS ===//
+// === APPLY SAVED SETTINGS === //
 document.addEventListener('DOMContentLoaded', () => {
   const savedDarkMode = localStorage.getItem("darkMode");
   if (savedDarkMode === "true") {
     document.body.classList.add("dark-mode");
   }
   const savedFontSize = localStorage.getItem("fontSize");
-if (savedFontSize) {
-  document.documentElement.style.fontSize = savedFontSize;
-}});
+  if (savedFontSize) {
+    document.documentElement.style.fontSize = savedFontSize;
+  }
+});
 
 let allQuestions = [];
 let selectedQuestions = [];
 let userAnswers = [];
 let currentQuestionIndex = 0;
-let timeLeft = 20;
+let totalTimeLeft = 30; // Total quiz time in seconds
 let timerInterval;
 
 // Element references
@@ -41,20 +42,17 @@ function fetchQuizQuestions() {
         console.error('No questions returned from the server.');
         return;
       }
-  // Set all the questions
-  allQuestions = questions;
-  selectedQuestions = questions;
-  userAnswers = Array(questions.length).fill(null); 
-  totalQuestionsEl.textContent = questions.length;
 
-  // Display the first question
-  showQuestion(0);
+      allQuestions = questions;
+      selectedQuestions = questions;
+      userAnswers = Array(questions.length).fill(null); 
+      totalQuestionsEl.textContent = questions.length;
 
-  // Start the timer
-  startTimer();
-  })
-  .catch(error => {
-    console.error('Error fetching quiz questions:', error);
+      showQuestion(0);
+      startTimer(); // Start total quiz timer
+    })
+    .catch(error => {
+      console.error('Error fetching quiz questions:', error);
     });
 }
 
@@ -62,34 +60,26 @@ function fetchQuizQuestions() {
 function showQuestion(index) {
   const q = selectedQuestions[index];
 
-  // Update the question number and text
   currentQuestionEl.textContent = index + 1;
   questionTextEl.textContent = q.question;
-
-  // Clear existing options and create new ones
   optionsContainerEl.innerHTML = '';
 
-  // Display the options dynamically
   q.options.forEach(optionText => {
     const button = document.createElement('button');
     button.textContent = optionText;
     button.classList.add('option-btn');
 
-    // Highlight the selected option
     if (userAnswers[index] === optionText) {
       button.classList.add('selected');
     }
 
-    // Event listener for selecting an answer
     button.addEventListener('click', () => {
       selectAnswer(optionText);
     });
 
-    // Append the option button to the options container
     optionsContainerEl.appendChild(button);
   });
 
-  // Update the navigation buttons
   updateNavButtons();
   updateProgressBar();
 }
@@ -98,7 +88,6 @@ function showQuestion(index) {
 function selectAnswer(answer) {
   userAnswers[currentQuestionIndex] = answer;
 
-  // Mark the selected answer visually
   const options = optionsContainerEl.querySelectorAll('.option-btn');
   options.forEach(button => {
     button.classList.remove('selected');
@@ -111,7 +100,7 @@ function selectAnswer(answer) {
 // Update the navigation buttons
 function updateNavButtons() {
   prevBtn.disabled = currentQuestionIndex === 0;
-  
+
   if (currentQuestionIndex === selectedQuestions.length - 1) {
     nextBtn.style.display = 'none';
     submitBtn.style.display = 'block';
@@ -127,40 +116,33 @@ function updateProgressBar() {
   progressBar.style.width = `${percent}%`;
 }
 
+// Start total quiz timer
 function startTimer() {
-  timeLeft = 20;
   updateTimerDisplay();
 
   clearInterval(timerInterval);
   timerInterval = setInterval(() => {
-    timeLeft--;
+    totalTimeLeft--;
     updateTimerDisplay();
 
-    if (timeLeft <= 0) {
+    if (totalTimeLeft <= 0) {
       clearInterval(timerInterval);
-      // Move to next question or finish quiz automatically
-      if (currentQuestionIndex < selectedQuestions.length - 1) {
-        currentQuestionIndex++;
-        showQuestion(currentQuestionIndex);
-        startTimer(); 
-      } else {
-        finishQuiz(); 
-      }
+      finishQuiz(); // Auto-submit when time runs out
     }
   }, 1000);
 }
 
-// Update the timer display
+// Update timer display
 function updateTimerDisplay() {
-  timerEl.textContent = `Time: ${timeLeft}s`;
-  timerEl.style.color = timeLeft <= 5 ? '#cc0000' : '#fc94df';
+  timerEl.textContent = `Time: ${totalTimeLeft}s`;
+  timerEl.style.color = totalTimeLeft <= 5 ? '#cc0000' : '#fc94df';
 }
 
+// Navigation
 function previousQuestion() {
   if (currentQuestionIndex > 0) {
     currentQuestionIndex--;
     showQuestion(currentQuestionIndex);
-    startTimer(); 
   }
 }
 
@@ -168,7 +150,6 @@ function nextQuestion() {
   if (currentQuestionIndex < selectedQuestions.length - 1) {
     currentQuestionIndex++;
     showQuestion(currentQuestionIndex);
-    startTimer(); 
   }
 }
 
@@ -178,24 +159,21 @@ function finishQuiz() {
 
   let score = 0;
   selectedQuestions.forEach((q, index) => {
-    const correctAnswer = q.correctAnswer;
-    if (userAnswers[index] === correctAnswer) {
+    if (userAnswers[index] === q.correctAnswer) {
       score++;
     }
   });
 
   const percentage = Math.round((score / selectedQuestions.length) * 100);
 
-  // Save score for later use
   localStorage.setItem('quizScore', percentage);
   localStorage.setItem('totalQuestions', selectedQuestions.length);
   localStorage.setItem('correctAnswers', score);
 
-  // Redirect to results page
   window.location.href = '/results';
 }
 
-// Wait for the DOM to load before starting
+// Initialize
 document.addEventListener('DOMContentLoaded', () => {
   fetchQuizQuestions();
   prevBtn.addEventListener('click', previousQuestion);
