@@ -16,8 +16,10 @@ A web-based Quiz Application developed collaboratively by our team as part of th
 ## 🖥️ How to run the server
 If you are doing it locally:
   1. Download the files in this GitHub repository.
-  2. Make sure you download node.js first ( https://nodejs.org/en/download)
-  3. In your terminal run it by typing "npm start" 
+  2. Make sure you download node.js first ( https://nodejs.org/en/download). Download and install it for your operating system.
+  3. Open your terminal and go to the project folder (use 'cd' to get to your directory)
+  4. Install dependencies (insert "npm install" in the terminal)
+  5. Lastly, in your terminal run it by typing "npm start" 
 If you click the website link you don't have to do anything. 
 
 ---
