@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.style.fontSize = savedFontSize;
   }
 });
+// Author: Jude Marryshow
 
 let allQuestions = [];
 let selectedQuestions = [];
