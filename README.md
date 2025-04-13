@@ -28,7 +28,7 @@ If you click the website link you don't have to do anything.
 
 - *Faiza*: I worked on the HTML and CSS for the questions and results pages. Made the design layout for the loading page. Worked on the JavaScript for the settings page and the questions page. Assisted in the JavaScript for the results page. 
 - *Hanya*: I worked on the HTML, CSS and JS of the settings page. I also assisted with the CSS and HTML of the results page as well and added to the Quiz and Results page's JS to apply the saved settings to there. 
-- *Jude*: I worked on the JS of the Questions Page. I also assisted on the HTML and CSS for the questions and results page. I made the design layout for the navigation bar on the quiz and results page.
+- *Jude*: I worked on the JS of the quiz Page. I also assisted on the HTML and CSS for the quiz and results page. I made the design layout for the navigation bar on the quiz and results page.
 - *Maira*: For this project, I developed and designed the homepage using CSS, EJS, and JavaScript. I also implemented the transition page Faiza designed that appears before the questions begin. Since the original version was built with plain HTML, CSS, and JS, I migrated the entire codebase to Express.js and handled all routing to ensure smooth navigation between pages. As part of the routing logic, I also implemented a system to prevent question repetition when users retake the quiz. Additionally, I contributed to the results page by adding a restart feature to allow users to start the quiz over.
 
 ## Website Photos
