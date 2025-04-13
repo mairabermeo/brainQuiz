@@ -12,8 +12,6 @@ if (savedDarkMode === "true") {
 if (savedFontSize) {
   document.documentElement.style.fontSize = savedFontSize;
 }
-
-  // Author: Jude Marryshow
   
     // Hide elements initially until we determine which ones to show
     const resultEmoji = document.getElementById('result-emoji');
