@@ -18,7 +18,7 @@ A web-based Quiz Application developed collaboratively by our team as part of th
 - *Faiza*: I worked on the HTML and CSS for the questions and results pages. Made the design layout for the loading page. Worked on the JavaScript for the settings page and the questions page. Assisted in the JavaScript for the results page. 
 - *Hanya*: I worked on the HTML, CSS and JS of the settings page. I also assisted with the CSS and HTML of the results page as well and added to the Quiz and Results page's JS to apply the saved settings to there. 
 - *Jude*:
-- *Maira*: For this project, I was responsible for developing the homepage using CSS, EJS, and JavaScript. I also designed and implemented the transition page that appears before the questions begin. Initially, our project was built using plain HTML, CSS, and JS, so I handled the migration to Express.js by converting our codebase and setting up all the necessary routes to ensure seamless navigation between pages.
+- *Maira*: For this project, I was responsible for developing the homepage using CSS, EJS, and JavaScript. I also designed and implemented the transition page that appears before the questions begin. Since the original version was built with plain HTML, CSS, and JS, I migrated the entire codebase to Express.js and handled all routing to ensure smooth navigation between pages. As part of the routing logic, I also implemented a system to prevent question repetition when users retake the quiz. Additionally, I contributed to the results page by adding a restart feature to allow users to start the quiz over.
 
 ## Website Photos
 ![Alt text](website_photos/homepage.webp)
