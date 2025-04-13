@@ -20,3 +20,8 @@ A web-based Quiz Application developed collaboratively by our team as part of th
 - *Jude*:
 - *Maira*:
 
+## Website Photos
+![Alt text](website_photos/homepage.webp)
+![Alt text](website_photos/quiz.webp)
+![Alt text](website_photos/results.webp)
+![Alt text](website_photos/settings.webp)
